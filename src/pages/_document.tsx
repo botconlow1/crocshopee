@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { getCssText } from '@/styles/stitches.config'
 import { Html, Head, Main, NextScript } from 'next/document'
 
