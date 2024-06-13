@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useEffect, useState } from 'react'
 import { VslContent } from './styles'
 
@@ -31,14 +32,15 @@ export function Vsl() {
     <VslContent>
       <iframe
         ref={meuIframeRef}
-        id="ifr_65af118a5a68c1000982c45d"
+        frameBorder="0"
         src="https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/embed.html"
-        allowFullScreen={false}
+        id="ifr_65af118a5a68c1000982c45d"
+        referrerPolicy="origin"
         style={{
           height: iframeHeight,
           border: 'none',
         }}
-      />
+      ></iframe>{' '}
     </VslContent>
   )
 }
@@ -73,8 +75,8 @@ export function Vsl2() {
     <VslContent>
       <iframe
         ref={meuIframeRef}
-        id="panda-1e269cef-885f-4342-ab7b-46e04af45b2b"
-        src="https://player-vz-4c44e78e-c09.tv.pandavideo.com.br/embed/?v=1e269cef-885f-4342-ab7b-46e04af45b2b"
+        id="ifr_65af118a5a68c1000982c45d"
+        src="https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/embed.html"
         allowFullScreen={false}
         style={{
           height: iframeHeight,
