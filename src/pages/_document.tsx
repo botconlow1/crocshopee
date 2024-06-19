@@ -19,17 +19,6 @@ export default function Document() {
         </script>
       </Head>
       <body>
-        <noscript>
-          <img
-            alt="oi"
-            height="1"
-            width="1"
-            style={{
-              display: 'none',
-            }}
-            src="https://www.facebook.com/tr?id=1875054716242626&ev=PageView&noscript=1"
-          />
-        </noscript>
         <Main />
         <NextScript />
       </body>
