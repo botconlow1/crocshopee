@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useEffect, useState } from 'react'
 import { VslContent } from './styles'
@@ -5,6 +7,18 @@ import { VslContent } from './styles'
 export function Vsl() {
   const meuIframeRef = useRef<HTMLIFrameElement>(null)
   const [iframeHeight, setIframeHeight] = useState('')
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src =
+      'https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/player.js'
+    script.async = true
+    document.head.appendChild(script)
+
+    return () => {
+      document.head.removeChild(script)
+    }
+  }, [])
 
   // Função para ajustar a altura do iframe com base na largura
   const ajustarAltura = () => {
@@ -29,19 +43,48 @@ export function Vsl() {
   }, [])
 
   return (
-    <VslContent>
-      <iframe
-        ref={meuIframeRef}
-        frameBorder="0"
-        src="https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/embed.html"
-        id="ifr_65af118a5a68c1000982c45d"
-        referrerPolicy="origin"
+    <>
+      <div
+        id="vid_65af118a5a68c1000982c45d"
         style={{
-          height: iframeHeight,
-          border: 'none',
+          position: 'relative',
+          width: '100%',
+          padding: '56.25% 0 0',
+          borderRadius: '.8rem',
+          boxShadow: '8px 8px 5px 0px rgba(0,0,0,0.35)',
         }}
-      ></iframe>{' '}
-    </VslContent>
+      >
+        <img
+          id="thumb_65af118a5a68c1000982c45d"
+          src="https://images.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/thumbnail.jpg"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: iframeHeight,
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+        <div
+          id="backdrop_65af118a5a68c1000982c45d"
+          style={{
+            position: 'absolute',
+            top: 0,
+            width: '100%',
+            height: '100%',
+            WebkitBackdropFilter: 'blur(5px)',
+            backdropFilter: 'blur(5px)',
+          }}
+        />
+      </div>
+      <style jsx>{`
+        .elementor-element:has(#smartplayer) {
+          width: 100%;
+        }
+      `}</style>
+    </>
   )
 }
 
@@ -75,8 +118,8 @@ export function Vsl2() {
     <VslContent>
       <iframe
         ref={meuIframeRef}
-        id="ifr_65af118a5a68c1000982c45d"
-        src="https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/65af118a5a68c1000982c45d/embed.html"
+        id="ifr_666b1ad3d2a7d5000ba05b92"
+        src="https://scripts.converteai.net/36581e86-3fe7-44d1-89e4-c5eb502798e8/players/666b1ad3d2a7d5000ba05b92/embed.html"
         allowFullScreen={false}
         style={{
           height: iframeHeight,

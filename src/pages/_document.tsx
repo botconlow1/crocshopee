@@ -11,7 +11,7 @@ export default function Document() {
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
         <script>
-          window.pixelId = "66551074268e41363b1b0e23"; var a =
+          window.pixelId = "666f9535ef5de141862b1d54"; var a =
           document.createElement("script"); a.setAttribute("async", "");
           a.setAttribute("defer", ""); a.setAttribute("src",
           "https://cdn.utmify.com.br/scripts/pixel/pixel.js");

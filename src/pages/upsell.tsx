@@ -34,6 +34,11 @@ export default function Home() {
         <meta name="description" content="Terapeuta Transforma" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo2.png" />
+        <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          async
+          defer
+        ></script>
       </Head>
 
       <MainContainer className={Vietnam.className}>
